@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay Youngjun Kim - Product Designer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #000000;
+      background: #FFFFFF;
+      letter-spacing: 0px;
+    }
+
+    /* Top Navigation */
+    .header {
+      height: 88px;
+      border-bottom: 1px solid #EFEFEF;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .logo {
+      font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 40px;
+    }
+
+    .header-nav-item {
+      font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0px;
+      color: #B7B7B7;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .header-nav-item:hover,
+    .header-nav-item.active {
+      color: #000000;
+    }
+
+    .header-nav-item:active {
+      color: #000000;
+    }
+
+    .header-right {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .version-badge {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0px;
+      color: #000000;
+      background-color: transparent;
+      border: 1px solid #E8E8E8;
+      border-radius: 20px;
+      padding: 6px 12px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .header-icon {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .language-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Language Dropdown */
+    .language-dropdown {
+      position: fixed;
+      top: 102px;
+      background: #FFFFFF;
+      border: 1px solid #000000;
+      width: 80px;
+      padding: 10px 0;
+      display: none;
+      z-index: 1000;
+      margin-left: -40px;
+    }
+
+    .language-item {
+      height: 36px;
+      width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #949494;
+      cursor: pointer;
+    }
+
+    .language-item.active {
+      color: #000000;
+    }
+
+    .language-item:hover {
+      color: #000000;
+    }
+
+    /* Search Overlay */
+    .search-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 88px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid #EFEFEF;
+      z-index: 200;
+      display: none;
+    }
+
+    .search-overlay-content {
+      height: 88px;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .search-overlay-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-overlay-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-bar-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .search-bar-input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #000000;
+      width: 450px;
+      height: 24px;
+    }
+
+    .search-bar-input::placeholder {
+      color: #949494;
+    }
+
+    .search-bar-close {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .search-close-btn {
+      position: absolute;
+      right: 40px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 80px 80px;
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-bottom: 80px;
+    }
+
+    .display {
+      font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: 0px;
+      color: #000000;
+      margin-bottom: 40px;
+    }
+
+    .philosophy-list {
+      margin-bottom: 80px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .philosophy-item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .philosophy-item .display {
+      margin-bottom: 0;
+    }
+
+
+    .body {
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+
+    /* Biography */
+    .biography {
+      margin-bottom: 80px;
+    }
+
+    .h2 {
+      font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: 0px;
+      color: #000000;
+      margin-bottom: 24px;
+    }
+
+    .bio-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .body strong {
+      font-weight: 700;
+      color: #000000;
+    }
+
+    .body p {
+      margin-bottom: 0;
+    }
+
+    /* Projects */
+    .projects {
+      margin-bottom: 80px;
+    }
+
+    .h2 {
+      font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: 0px;
+      color: #000000;
+      margin-bottom: 24px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+
+    .project-card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      cursor: pointer;
+    }
+
+    .project-card.disabled {
+      pointer-events: none;
+    }
+
+    .project-image {
+      transition: all 0.2s ease;
+    }
+
+    .project-card:hover .project-image {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .project-image {
+      width: 100%;
+      aspect-ratio: 320 / 220;
+      background: #FFFFFF;
+      border: 1px solid #E8E8E8;
+      border-radius: 0px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-medium-title {
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: 0px;
+      color: #000000;
+      margin-bottom: 14px;
+      padding-top: 5px;
+    }
+
+    .card-medium-text {
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 0px;
+      color: #616161;
+    }
+
+
+    /* Footer */
+    .footer {
+      background: #FFFFFF;
+      border-top: 1px solid #EFEFEF;
+      padding: 40px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copyright {
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .footer-link {
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0px;
+      color: #000000;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links:hover .footer-link {
+      color: #B7B7B7;
+    }
+
+    .footer-link:hover {
+      color: #000000 !important;
+    }
+
+    /* Responsive Grid */
+    @media (max-width: 1024px) {
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+      .container {
+        padding: 60px 40px;
+      }
+      .header {
+        padding: 0 40px;
+      }
+      .footer {
+        padding: 40px 40px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .philosophy-list {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .philosophy-list {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .container {
+        padding: 40px 24px;
+      }
+      .header {
+        padding: 0 24px;
+      }
+      .footer {
+        padding: 40px 24px;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+      }
+      .display {
+        font-size: 32px;
+      }
+      .display {
+        font-size: 40px;
+      }
+      .bio-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">J</div>
+      <nav class="header-nav">
+        <a href="#home" class="header-nav-item active">Home</a>
+        <a href="#about" class="header-nav-item">About</a>
+        <a href="#info" class="header-nav-item">Info</a>
+      </nav>
+    </div>
+    <div class="header-right">
+      <div class="version-badge">v 1.0</div>
+      <div class="language-wrapper">
+        <img src="images/lds_earth_regular.png" alt="Language" class="header-icon" id="languageBtn">
+        <div class="language-dropdown" id="languageDropdown">
+          <div class="language-item">EN</div>
+          <div class="language-item active">KR</div>
+          <div class="language-item">JP</div>
+        </div>
+      </div>
+      <img src="images/lds_search_regular.png" alt="Search" class="header-icon" id="searchBtn">
+    </div>
+  </header>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-overlay-content">
+      <div class="search-overlay-left">
+        <div class="logo">J</div>
+      </div>
+      <div class="search-overlay-right">
+        <img src="images/lds_search_regular.png" alt="Search" class="search-bar-icon">
+        <input type="text" class="search-bar-input" placeholder="Search product" id="searchInput">
+        <img src="images/lds_times_regular.png" alt="Close" class="search-bar-close" id="closeSearchBtn">
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Hero / Philosophy -->
+    <section class="hero" id="home">
+      <h1 class="display">A well-designed product should be both visually appealing and highly functional, prioritizing usability¹ and efficiency². The ultimate goal of design is to create a seamless experience for the user, meeting their needs and expectations without complication or frustration.³</h1>
+
+      <div class="philosophy-list">
+        <div class="philosophy-item">
+          <span class="display">1</span>
+          <span class="body">제품 디자인에서 사용성은 제품이 얼마나 사용하기 쉬운지, 사용자가 목표를 달성하는 데 얼마나 도움이 되는지를 측정하는 척도입니다. 직관성 빠르게 완료하고, 사용할 때 스트레스가 없으며, 제품에 대한 만족감을 느낄 수 있습니다.</span>
+        </div>
+        <div class="philosophy-item">
+          <span class="display">2</span>
+          <span class="body">제품 디자인에서 효율성은 낭비되는 노력이나 비용을 최소화하면서 최대의 성산성을 달성하는 능력입니다. 효율성은 비즈니스 목표에 부합하는 사용자 친화적인 솔루션을 만들고 성산성을 높여 시뮬레이션 삶을 개선하는 것입니다.</span>
+        </div>
+        <div class="philosophy-item">
+          <span class="display">3</span>
+          <span class="body">바람: 잘 디자인된 제품은 시각적으로 매력적이고 기능적으로 우수해야 하며, 사용성과 효율성을 우선시해야 합니다. 디자인의 궁극적인 목표는 복잡하거나 불편함 없이 사용자의 요구와 기대에 부응하는 원활한 경험을 제공하는 것입니다.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biography -->
+    <section class="biography" id="about">
+      <h2 class="h2">About</h2>
+      <div class="bio-content">
+        <div class="body">
+          <p><strong>현재</strong> 시니어 프로덕트 디자이너로 일하고 있습니다.</p>
+          <p>이전에는 Ogilvy, FINDA, AITRICS, COINONE, 정육각 등에서 프로덕트 디자이너로 일했습니다.</p>
+          <p>런던 커뮤니케이션 대학(London College of Communication)에서 인터랙션 디자인 석사 학위를 취득했습니다.</p>
+        </div>
+        <div class="body">
+          <p><strong>Currently</strong> I work as a senior product designer.</p>
+          <p>Previously worked as a product designer at Ogilvy, FINDA, AITRICS, COINONE, and Jeongyookgak.</p>
+          <p>Holds an MA in Interaction Design from London College of Communication.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Digital Products -->
+    <section class="projects">
+      <h2 class="h2">Digital Products</h2>
+      <div class="project-grid">
+        <a href="#" class="project-card">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/29cm_gift-curation_thumb.png?updatedAt=1746955891918" alt="29CM Gift Home">
+          </div>
+          <h3 class="card-medium-title">29CM Gift Home</h3>
+          <p class="card-medium-text">E-Commerce, Shopping, Gift, Curation</p>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/29cm_style-onboarding_thumb.png?updatedAt=1746955895655" alt="29CM Style Onboarding">
+          </div>
+          <h3 class="card-medium-title">29CM Style Onboarding</h3>
+          <p class="card-medium-text">E-Commerce, Onboarding, Personalization</p>
+        </a>
+
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/29cm_list_thumb.jpg?updatedAt=1746955888360" alt="29CM Product List">
+          </div>
+          <h3 class="card-medium-title">29CM Product List</h3>
+          <p class="card-medium-text">E-Commerce, Product List, Filter</p>
+        </div>
+
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/29cm_like_thumb.jpg?updatedAt=1746955888317" alt="29CM Like">
+          </div>
+          <h3 class="card-medium-title">29CM Like</h3>
+          <p class="card-medium-text">E-Commerce, Wishlist, Collection</p>
+        </div>
+
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/29cm_home_thumb.jpg?updatedAt=1746955888327" alt="29CM Home">
+          </div>
+          <h3 class="card-medium-title">29CM Home</h3>
+          <p class="card-medium-text">E-Commerce, Home, Feed</p>
+        </div>
+
+        <a href="#" class="project-card">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/coinone_swap_thumb.jpg?updatedAt=1746955888379" alt="Coinone Swap">
+          </div>
+          <h3 class="card-medium-title">Coinone Swap</h3>
+          <p class="card-medium-text">Cryptocurrency, Trading, Exchange</p>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/coinone_home_thumb.jpg?updatedAt=1746955893148" alt="Coinone Home Renewal">
+          </div>
+          <h3 class="card-medium-title">Coinone Home Renewal</h3>
+          <p class="card-medium-text">Cryptocurrency, Dashboard, Home</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Brand Experiences -->
+    <section class="projects">
+      <h2 class="h2">Brand Experiences</h2>
+      <div class="project-grid">
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/29cm_sns_thumb.jpg?updatedAt=1746955897387" alt="29CM SNS Guide">
+          </div>
+          <h3 class="card-medium-title">29CM SNS Guide</h3>
+          <p class="card-medium-text">Brand, Social Media, Guidelines</p>
+        </div>
+
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/ep_thumb.jpg?updatedAt=1746955893503" alt="Episode Seongsu 121">
+          </div>
+          <h3 class="card-medium-title">Episode Seongsu 121</h3>
+          <p class="card-medium-text">Brand, Space, Experience</p>
+        </div>
+
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/marinahill_thumb.jpg?updatedAt=1746955888264" alt="Marina Hill Jeju">
+          </div>
+          <h3 class="card-medium-title">Marina Hill Jeju</h3>
+          <p class="card-medium-text">Brand, Resort, Identity</p>
+        </div>
+
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/postgraduate_thumb.jpg?updatedAt=1746955888355" alt="Postgraduate Show">
+          </div>
+          <h3 class="card-medium-title">Postgraduate Show</h3>
+          <p class="card-medium-text">Exhibition, MA Project, LCC</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experimental Projects -->
+    <section class="projects">
+      <h2 class="h2">Experimental Projects</h2>
+      <div class="project-grid">
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/pixelated_thumb.jpg?updatedAt=1746955893186" alt="Pixelated World">
+          </div>
+          <h3 class="card-medium-title">Pixelated World</h3>
+          <p class="card-medium-text">Generative Art, Interactive, Web</p>
+        </div>
+
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/dp_thumbi.jpg?updatedAt=1746955893567" alt="Dot Portrait">
+          </div>
+          <h3 class="card-medium-title">Dot Portrait</h3>
+          <p class="card-medium-text">Generative Art, Portrait, Algorithm</p>
+        </div>
+
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/desigene_thumb.jpg?updatedAt=1746955888376" alt="DESIGENE">
+          </div>
+          <h3 class="card-medium-title">DESIGENE</h3>
+          <p class="card-medium-text">AI, Design Tool, Experiment</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MA Final Projects -->
+    <section class="projects">
+      <h2 class="h2">MA Final Projects</h2>
+      <div class="project-grid">
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/compromuse_thumb.gif?updatedAt=1746955893519" alt="Points of Compromise">
+          </div>
+          <h3 class="card-medium-title">Points of Compromise</h3>
+          <p class="card-medium-text">Interactive Installation, Data Visualization</p>
+        </div>
+
+        <div class="project-card disabled">
+          <div class="project-image">
+            <img src="https://ik.imagekit.io/jayyoungjunkim/thumb/rounded-title_thumb.jpg?updatedAt=1746955888382" alt="Rounded Title">
+          </div>
+          <h3 class="card-medium-title">Rounded Title</h3>
+          <p class="card-medium-text">Typography, Interactive, Web</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="info">
+    <div class="footer-copyright">© 2024 Jay Kim</div>
+    <div class="footer-links">
+      <a href="#" class="footer-link">Terms of Use</a>
+      <a href="#" class="footer-link">FAQ</a>
+      <a href="#" class="footer-link">Contact</a>
+      <a href="#" class="footer-link">Github</a>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll spy
+    const sections = document.querySelectorAll('section[id], footer[id]');
+    const navLinks = document.querySelectorAll('.header-nav a');
+
+    function updateActiveNav() {
+      let current = '';
+
+      // Check if at bottom of page (for footer/info section)
+      const isAtBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50;
+
+      if (isAtBottom) {
+        current = 'info';
+      } else {
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.scrollY >= (sectionTop - 100)) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        // If at top of page, set Home as active
+        if (window.scrollY < 300) {
+          current = 'home';
+        }
+      }
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (current && href === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    // Update on scroll
+    window.addEventListener('scroll', updateActiveNav);
+
+    // Smooth scroll on click
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const targetId = href.substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Initialize on page load
+    updateActiveNav();
+
+    // Search functionality
+    const searchBtn = document.getElementById('searchBtn');
+    const closeSearchBtn = document.getElementById('closeSearchBtn');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchInput = document.getElementById('searchInput');
+
+    searchBtn.addEventListener('click', function() {
+      searchOverlay.style.display = 'block';
+      setTimeout(() => searchInput.focus(), 10);
+    });
+
+    closeSearchBtn.addEventListener('click', function() {
+      searchOverlay.style.display = 'none';
+      searchInput.value = '';
+    });
+
+    // ESC key to close search
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && searchOverlay.style.display === 'block') {
+        searchOverlay.style.display = 'none';
+        searchInput.value = '';
+      }
+    });
+
+    // Language dropdown functionality
+    const languageBtn = document.getElementById('languageBtn');
+    const languageDropdown = document.getElementById('languageDropdown');
+    const languageItems = document.querySelectorAll('.language-item');
+
+    languageBtn.addEventListener('click', function(e) {
+      const rect = languageBtn.getBoundingClientRect();
+      const centerX = rect.left + (rect.width / 2);
+      const topY = rect.bottom + 14;
+      languageDropdown.style.left = centerX + 'px';
+      languageDropdown.style.top = topY + 'px';
+      languageDropdown.style.display = languageDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    languageItems.forEach(item => {
+      item.addEventListener('click', function() {
+        languageItems.forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+        languageDropdown.style.display = 'none';
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+        languageDropdown.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

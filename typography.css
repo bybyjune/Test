@@ -1,0 +1,275 @@
+/**
+ * Onboarding Site Design System - Typography
+ *
+ * DESIGN.md의 typography 토큰을 기반으로 한 타이포그래피 클래스입니다.
+ * 클래스 이름은 DESIGN.md의 토큰 이름과 정확히 일치합니다.
+ */
+
+/* ========================================
+   제목 (Headings) - LINE Seed Sans
+   ======================================== */
+
+.hero {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-snug);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+.display {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-snug);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+.h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-snug);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+.h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-snug);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+.h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-normal);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+/* h4부터는 SF Pro Text 사용 */
+.h4 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-normal);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+.h5 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+.h6 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+/* ========================================
+   본문 (Body) - SF Pro Text
+   ======================================== */
+
+.body-l {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-l);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-loose);
+  letter-spacing: 0;
+  color: var(--color-body);
+}
+
+.body-m,
+.body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-loose);
+  letter-spacing: 0;
+  color: var(--color-body);
+}
+
+.body-s,
+.body-sm {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-s);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: 0;
+  color: var(--color-body);
+}
+
+/* ========================================
+   레이블 & 캡션
+   ======================================== */
+
+.label {
+  font-family: var(--font-body);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: 0;
+  color: var(--color-body);
+}
+
+/* ========================================
+   특수 용도
+   ======================================== */
+
+.brand-logo {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-brand-logo);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+/* ========================================
+   유틸리티 클래스
+   ======================================== */
+
+/* 텍스트 색상 변형 */
+.text-secondary {
+  color: var(--color-body-secondary);
+}
+
+.text-tertiary {
+  color: var(--color-body-tertiary);
+}
+
+.text-disabled {
+  color: var(--color-body-disabled);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-red {
+  color: var(--color-red);
+}
+
+.text-link {
+  color: var(--color-link);
+}
+
+/* 폰트 Weight 유틸리티 */
+.font-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.font-extrabold {
+  font-weight: var(--font-weight-extrabold);
+}
+
+/* 텍스트 정렬 */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ========================================
+   HTML 기본 요소 스타일
+   ======================================== */
+
+/* HTML 태그에 기본 스타일 적용 (선택사항) */
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-snug);
+  color: var(--color-ink);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-snug);
+  color: var(--color-ink);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-normal);
+  color: var(--color-ink);
+}
+
+h4 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-normal);
+  color: var(--color-ink);
+}
+
+h5 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  color: var(--color-ink);
+}
+
+h6 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  color: var(--color-ink);
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-loose);
+  color: var(--color-body);
+}

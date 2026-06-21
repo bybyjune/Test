@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:designsystem.linecorp.com)",
+      "WebFetch(domain:getdesign.md)",
+      "Bash(ls -la ~/.claude/ide/)",
+      "Read(//Users/al03038011/.claude/ide/**)"
+    ]
+  }
+}

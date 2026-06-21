@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LINE Design System - Preview</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        background: #ffffff;
+        color: #000000;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 80px 40px;
+      }
+
+      .hero {
+        margin-bottom: 100px;
+      }
+
+      .hero h1 {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #616161;
+        max-width: 800px;
+      }
+
+      .section {
+        margin-bottom: 120px;
+      }
+
+      .section-title {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 40px;
+        color: #000000;
+      }
+
+      .section-subtitle {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.3;
+        margin-top: 40px;
+        margin-bottom: 24px;
+        color: #000000;
+      }
+
+      /* Colors */
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 24px;
+        margin-bottom: 60px;
+      }
+
+      .color-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .color-chip {
+        height: 80px;
+        border-radius: 8px;
+        border: 1px solid #e8e8e8;
+        margin-bottom: 12px;
+      }
+
+      .color-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 8px;
+      }
+
+      .color-value {
+        font-size: 13px;
+        color: #616161;
+        font-family: "SF Mono", "Monaco", monospace;
+      }
+
+      /* Typography */
+      .typo-sample {
+        padding: 40px 0;
+        border-bottom: 1px solid #e8e8e8;
+        margin-bottom: 0;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        gap: 80px;
+      }
+
+      .typo-label {
+        font-size: 13px;
+        color: #616161;
+        font-weight: 400;
+        min-width: 180px;
+        flex-shrink: 0;
+      }
+
+      .typo-label-name {
+        font-size: 15px;
+        font-weight: 600;
+        color: #000000;
+        line-height: 1.5;
+        margin-bottom: 6px;
+      }
+
+      .typo-label-specs {
+        font-size: 13px;
+        color: #616161;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 6px;
+      }
+
+      .typo-label-font {
+        font-size: 13px;
+        color: #616161;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      .typo-content {
+        flex: 1;
+      }
+
+      .typo-hero {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: 0px;
+      }
+
+      .typo-display {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .typo-h1 {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .typo-h2 {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .typo-h3 {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 1.3;
+        letter-spacing: 0px;
+      }
+
+      .typo-h4 {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.3;
+        letter-spacing: 0px;
+      }
+
+      .typo-h5 {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: 0px;
+      }
+
+      .typo-h6 {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0px;
+      }
+
+      .typo-brand-logo {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 19px;
+        font-weight: 800;
+        line-height: 1.0;
+        letter-spacing: 0px;
+      }
+
+      .typo-body {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6;
+      }
+
+      .typo-body-sm {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      /* Spacing */
+      .spacing-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .spacing-item {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .spacing-label {
+        width: 100px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #000000;
+      }
+
+      .spacing-visual {
+        background: #e8e8e8;
+        height: 40px;
+        border-radius: 4px;
+      }
+
+      .spacing-value {
+        font-size: 13px;
+        color: #616161;
+        font-family: "SF Mono", "Monaco", monospace;
+      }
+
+      /* Border Radius */
+      .radius-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 24px;
+      }
+
+      .radius-item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .radius-visual {
+        height: 60px;
+        background: transparent;
+        border: 1px solid #e8e8e8;
+      }
+
+      .radius-label {
+        font-size: 14px;
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 2px;
+      }
+
+      .radius-value {
+        font-size: 13px;
+        color: #616161;
+      }
+
+      /* Components */
+      .component-showcase {
+        padding: 40px;
+        background: #fbfbfb;
+        border-radius: 12px;
+        margin-bottom: 40px;
+      }
+
+      .component-row {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+
+      .component-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .component-label {
+        width: 150px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #000000;
+      }
+
+      /* Button */
+      .btn-primary {
+        background-color: #ffffff;
+        color: #000000;
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 50px;
+        border: 1px solid #e8e8e8;
+        padding: 0 16px 0 24px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .btn-primary-hover {
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 50px;
+        border: 1px solid #000000;
+        padding: 0 16px 0 24px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .btn-icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      /* Radio */
+      .radio-group {
+        display: flex;
+        gap: 32px;
+      }
+
+      .radio-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+      }
+
+      .radio-circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #b7b7b7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+      }
+
+      .radio-circle.selected {
+        border-color: #00c73c;
+      }
+
+      .radio-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #00c73c;
+        display: none;
+      }
+
+      .radio-circle.selected .radio-dot {
+        display: block;
+      }
+
+      .radio-label {
+        font-size: 15px;
+        color: #000000;
+      }
+
+      /* Tabs */
+      .tabs-container {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+      }
+
+      .tabs {
+        display: flex;
+        gap: 0;
+        position: relative;
+      }
+
+      .tabs::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: #e8e8e8;
+        z-index: 0;
+      }
+
+      .tab {
+        height: 56px;
+        min-width: 120px;
+        padding: 0 30px;
+        background: #ffffff;
+        color: #949494;
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        border: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+        border-radius: 0;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .tab:first-child {
+        border-top-left-radius: 8px;
+      }
+
+      .tab:last-child {
+        border-top-right-radius: 8px;
+      }
+
+      .tab:not(:first-child) {
+        margin-left: -1px;
+      }
+
+      .tab.active {
+        background: #efefef;
+        color: #111111;
+        font-weight: 600;
+        border: 1px solid #e8e8e8;
+        border-bottom: none;
+        z-index: 2;
+      }
+
+      .tab-content {
+        padding: 24px;
+        background: #efefef;
+        border: 1px solid #e8e8e8;
+        border-top: none;
+        border-radius: 0;
+        min-height: 100px;
+      }
+
+      /* Card */
+      .card {
+        max-width: 408px;
+      }
+
+      .card-image {
+        width: 100%;
+        height: 280px;
+        background: #ffffff;
+        border: 1px solid #e8e8e8;
+        border-radius: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #949494;
+        font-size: 14px;
+        margin-bottom: 22px;
+      }
+
+      .card-content {
+        padding: 0;
+      }
+
+      .card-title {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 1.3;
+        letter-spacing: 0px;
+        margin-bottom: 16px;
+        padding-top: 5px;
+        color: #000000;
+      }
+
+      .card-text {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #616161;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* Card Medium */
+      .card-medium {
+        max-width: 320px;
+        cursor: pointer;
+      }
+
+      .card-medium-image {
+        transition: all 0.2s ease;
+      }
+
+      .card-medium:hover .card-medium-image {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+      }
+
+      .card {
+        cursor: pointer;
+      }
+
+      .card-image {
+        transition: all 0.2s ease;
+      }
+
+      .card:hover .card-image {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+      }
+
+      .card-medium-image {
+        width: 100%;
+        height: 220px;
+        background: #ffffff;
+        border: 1px solid #e8e8e8;
+        border-radius: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #949494;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      .card-medium-title {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.3;
+        letter-spacing: 0px;
+        margin-bottom: 14px;
+        padding-top: 5px;
+        color: #000000;
+      }
+
+      .card-medium-text {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #616161;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* Header Preview */
+      .header-preview {
+        background: #ffffff;
+        margin-bottom: 40px;
+      }
+
+      .header {
+        height: 88px;
+        border-bottom: 1px solid #efefef;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 19px;
+        font-weight: 800;
+        line-height: 1.0;
+        letter-spacing: 0px;
+      }
+
+      .header-nav {
+        display: flex;
+        gap: 32px;
+        margin-left: 25px;
+      }
+
+      .header-nav a {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0px;
+        color: #b7b7b7;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .header-nav a:hover,
+      .header-nav a.active {
+        color: #000000;
+      }
+
+      .version-badge {
+        padding: 6px 12px;
+        border: 1px solid #e8e8e8;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0px;
+        height: 28px;
+        display: inline-flex;
+        align-items: center;
+        background-color: transparent;
+      }
+
+      .header-icons {
+        display: flex;
+        gap: 26px;
+        align-items: center;
+      }
+
+      .header-icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .language-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      /* Language Dropdown */
+      .language-dropdown {
+        position: absolute;
+        top: calc(100% + 14px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        width: 80px;
+        padding: 10px 0;
+        display: none;
+        z-index: 1000;
+      }
+
+      .header-preview {
+        position: relative;
+        z-index: 1;
+      }
+
+      .language-item {
+        height: 36px;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: #949494;
+        cursor: pointer;
+      }
+
+      .language-item.active {
+        color: #000000;
+      }
+
+      .language-item:hover {
+        color: #000000;
+      }
+
+      /* Search Bar */
+      .search-preview {
+        background: #ffffff;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 0;
+      }
+
+      .search-bar-container {
+        height: 88px;
+        border-bottom: 1px solid #efefef;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .search-bar-container + .search-bar-container {
+        margin-top: 24px;
+      }
+
+      .search-bar-left {
+        display: flex;
+        align-items: center;
+      }
+
+      .search-bar-home-icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .search-bar-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .search-bar-icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .search-bar-input {
+        border: none;
+        outline: none;
+        background: transparent;
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #000000;
+        width: 450px;
+        height: 24px;
+      }
+
+      .search-bar-input::placeholder {
+        color: #949494;
+      }
+
+      .search-bar-close {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+
+      /* Left Nav Preview */
+      .nav-preview {
+        background: #ffffff;
+        display: flex;
+        max-width: 800px;
+      }
+
+      .left-nav {
+        width: 260px;
+        background: #ffffff;
+        border-right: 1px solid #efefef;
+        padding: 33px 34px 40px 38px;
+      }
+
+      .nav-category-title {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        color: #000000;
+        padding: 12px 0;
+        margin-bottom: 0;
+      }
+
+      .nav-item {
+        display: flex;
+        align-items: center;
+        height: 42px;
+        padding: 0;
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0px;
+        color: #949494;
+        text-decoration: none;
+        border-radius: 0;
+        transition: all 0.2s;
+      }
+
+      .nav-item:hover {
+        color: #000000;
+        font-weight: 700;
+      }
+
+      .nav-item.active {
+        color: #000000;
+        font-weight: 700;
+      }
+
+      .nav-item.nav-parent {
+        font-weight: 700;
+        color: #000000;
+        cursor: default;
+      }
+
+      .nav-submenu {
+        padding-left: 0;
+      }
+
+      .nav-submenu .nav-item {
+        padding-left: 12px;
+      }
+
+      .nav-content {
+        flex: 1;
+        padding: 40px;
+        background: #ffffff;
+      }
+
+      .nav-content h3 {
+        font-family: "LINE Seed Sans", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+
+      .nav-content p {
+        font-size: 15px;
+        color: #616161;
+        line-height: 1.6;
+      }
+
+      /* Footer Preview */
+      .footer-preview {
+        background: #ffffff;
+      }
+
+      .footer {
+        background: #ffffff;
+        border-top: 1px solid #efefef;
+        padding: 40px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-copyright {
+        font-size: 13px;
+        font-weight: 500;
+        color: #000000;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 32px;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 32px;
+      }
+
+      .footer-links:hover .footer-link {
+        color: #cccccc;
+      }
+
+      .footer-link {
+        font-size: 13px;
+        font-weight: 500;
+        color: #000000;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .footer-links:hover .footer-link {
+        color: #b7b7b7;
+      }
+
+      .footer-link:hover {
+        color: #000000 !important;
+      }
+
+      /* Responsive Grid for Card Large and Card Medium */
+      @media (max-width: 1024px) {
+        .component-showcase > div[style*="grid-template-columns"] {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 24px !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .component-showcase > div[style*="grid-template-columns"] {
+          grid-template-columns: 1fr !important;
+          gap: 24px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hero -->
+      <div class="hero">
+        <h1>LDS site Design.md</h1>
+        <p>
+          The LINE Design System website's design system is provided through DESIGN.md. This page is a preview that visualizes the md file, created to assist designers when building with vibe-coding.<br>
+          <a href="https://designsystem.linecorp.com/" target="_blank" style="color: #4d73ff; text-decoration: none;">https://designsystem.linecorp.com/</a>
+        </p>
+      </div>
+
+      <!-- Colors -->
+      <section class="section">
+        <h2 class="section-title">Colors</h2>
+
+        <h3 class="section-subtitle">Brand & Accent</h3>
+        <div class="color-grid">
+          <div class="color-item">
+            <div class="color-chip" style="background: #00c73c"></div>
+            <div class="color-name">LINE Green</div>
+            <div class="color-value">#00C73C</div>
+          </div>
+          <div class="color-item">
+            <div class="color-chip" style="background: #ff334b"></div>
+            <div class="color-name">LINE Red</div>
+            <div class="color-value">#FF334B</div>
+          </div>
+          <div class="color-item">
+            <div class="color-chip" style="background: #4d73ff"></div>
+            <div class="color-name">Link</div>
+            <div class="color-value">#4D73FF</div>
+          </div>
+        </div>
+
+        <h3 class="section-subtitle">Text</h3>
+        <div class="color-grid">
+          <div class="color-item">
+            <div class="color-chip" style="background: #000000"></div>
+            <div class="color-name">Primary Ink</div>
+            <div class="color-value">#000000</div>
+          </div>
+          <div class="color-item">
+            <div class="color-chip" style="background: #111111"></div>
+            <div class="color-name">Ink Alt</div>
+            <div class="color-value">#111111</div>
+          </div>
+          <div class="color-item">
+            <div class="color-chip" style="background: #616161"></div>
+            <div class="color-name">Body Secondary</div>
+            <div class="color-value">#616161</div>
+          </div>
+          <div class="color-item">
+            <div class="color-chip" style="background: #949494"></div>
+            <div class="color-name">Body Tertiary</div>
+            <div class="color-value">#949494</div>
+          </div>
+          <div class="color-item">
+            <div class="color-chip" style="background: #cccccc"></div>
+            <div class="color-name">Body Disabled</div>
+            <div class="color-value">#CCCCCC</div>
+          </div>
+        </div>
+
+        <h3 class="section-subtitle">Surface</h3>
+        <div class="color-grid">
+          <div class="color-item">
+            <div class="color-chip" style="background: #ffffff"></div>
+            <div class="color-name">Pure White</div>
+            <div class="color-value">#FFFFFF</div>
+          </div>
+          <div class="color-item">
+            <div class="color-chip" style="background: #f0f0f0"></div>
+            <div class="color-name">Canvas Secondary</div>
+            <div class="color-value">#F0F0F0</div>
+          </div>
+          <div class="color-item">
+            <div class="color-chip" style="background: #fbfbfb"></div>
+            <div class="color-name">Canvas Tertiary</div>
+            <div class="color-value">#FBFBFB</div>
+          </div>
+          <div class="color-item">
+            <div class="color-chip" style="background: #efefef"></div>
+            <div class="color-name">Selected State</div>
+            <div class="color-value">#EFEFEF</div>
+          </div>
+        </div>
+
+        <h3 class="section-subtitle">Borders</h3>
+        <div class="color-grid">
+          <div class="color-item">
+            <div
+              class="color-chip"
+              style="background: transparent; border: 1px solid #efefef"
+            ></div>
+            <div class="color-name">Border Light</div>
+            <div class="color-value">#EFEFEF</div>
+          </div>
+          <div class="color-item">
+            <div
+              class="color-chip"
+              style="background: transparent; border: 1px solid #e8e8e8"
+            ></div>
+            <div class="color-name">Border Default</div>
+            <div class="color-value">#E8E8E8</div>
+          </div>
+          <div class="color-item">
+            <div
+              class="color-chip"
+              style="background: transparent; border: 1px solid #b7b7b7"
+            ></div>
+            <div class="color-name">Border Medium</div>
+            <div class="color-value">#B7B7B7</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typography -->
+      <section class="section">
+        <h2 class="section-title">Typography</h2>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">hero</div>
+            <div class="typo-label-specs">60px / 800 / 1.2 / 0</div>
+            <div class="typo-label-font">LINE Seed Sans</div>
+          </div>
+          <div class="typo-content">
+            <div class="typo-hero">The quick brown fox</div>
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">display</div>
+            <div class="typo-label-specs">48px / 800 / 1.2 / 0</div>
+            <div class="typo-label-font">LINE Seed Sans</div>
+          </div>
+          <div class="typo-content">
+            <div class="typo-display">Box Button Component</div>
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">h1</div>
+            <div class="typo-label-specs">40px / 800 / 1.2 / 0</div>
+            <div class="typo-label-font">LINE Seed Sans</div>
+          </div>
+          <div class="typo-content">
+            <div class="typo-h1">Section Heading</div>
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">h2</div>
+            <div class="typo-label-specs">32px / 800 / 1.2 / 0</div>
+            <div class="typo-label-font">LINE Seed Sans</div>
+          </div>
+          <div class="typo-content">
+            <div class="typo-h2">Anatomy</div>
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">h3</div>
+            <div class="typo-label-specs">28px / 800 / 1.3 / 0</div>
+            <div class="typo-label-font">LINE Seed Sans</div>
+          </div>
+          <div class="typo-content">
+            <div class="typo-h3">Sub-section Heading</div>
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">h4</div>
+            <div class="typo-label-specs">20px / 800 / 1.3 / 0</div>
+            <div class="typo-label-font">SF Pro Text</div>
+          </div>
+          <div class="typo-content">
+            <div class="typo-h4">Card Title</div>
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">h5</div>
+            <div class="typo-label-specs">18px / 700 / 1.3 / 0</div>
+            <div class="typo-label-font">SF Pro Text</div>
+          </div>
+          <div class="typo-content">
+            <div class="typo-h5">Description Title</div>
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">h6</div>
+            <div class="typo-label-specs">17px / 700 / 1.2 / 0</div>
+            <div class="typo-label-font">LINE Seed Sans</div>
+          </div>
+          <div class="typo-content">
+            <div class="typo-h6">Navigation Menu</div>
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">body</div>
+            <div class="typo-label-specs">16px / 400 / 1.6 / 0</div>
+            <div class="typo-label-font">SF Pro Text</div>
+          </div>
+          <div class="typo-content">
+            <div class="typo-body">
+              The Box Button is the most common button type in the form of a box.
+              This Box Button is suitable for essential clickable areas of the
+              screen, including ones used as the key button for executing
+              important actions on the screen.
+            </div>
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">body-sm</div>
+            <div class="typo-label-specs">15px / 400 / 1.5 / 0</div>
+            <div class="typo-label-font">SF Pro Text</div>
+          </div>
+          <div class="typo-content">
+            <div class="typo-body-sm">
+              Navigation items and small body text use this style.
+            </div>
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-label">
+            <div class="typo-label-name">label</div>
+            <div class="typo-label-specs">14px / 700 / 1.5 / 0</div>
+            <div class="typo-label-font">SF Pro Text</div>
+          </div>
+          <div class="typo-content">
+            <div style="font-size: 14px; font-weight: 700">State Label Text</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Spacing -->
+      <section class="section">
+        <h2 class="section-title">Spacing</h2>
+        <div class="spacing-grid">
+          <div class="spacing-item">
+            <div class="spacing-label">4px</div>
+            <div class="spacing-visual" style="width: 4px"></div>
+            <div class="spacing-value">xxs</div>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-label">8px</div>
+            <div class="spacing-visual" style="width: 8px"></div>
+            <div class="spacing-value">xs</div>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-label">12px</div>
+            <div class="spacing-visual" style="width: 12px"></div>
+            <div class="spacing-value">sm</div>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-label">16px</div>
+            <div class="spacing-visual" style="width: 16px"></div>
+            <div class="spacing-value">md (default)</div>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-label">24px</div>
+            <div class="spacing-visual" style="width: 24px"></div>
+            <div class="spacing-value">lg (card padding)</div>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-label">32px</div>
+            <div class="spacing-visual" style="width: 32px"></div>
+            <div class="spacing-value">xl</div>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-label">40px</div>
+            <div class="spacing-visual" style="width: 40px"></div>
+            <div class="spacing-value">xxl</div>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-label">80px</div>
+            <div class="spacing-visual" style="width: 80px"></div>
+            <div class="spacing-value">section</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Border Radius -->
+      <section class="section">
+        <h2 class="section-title">Border Radius</h2>
+        <div class="radius-grid">
+          <div class="radius-item">
+            <div class="radius-visual" style="border-radius: 0px"></div>
+            <div class="radius-label">None</div>
+            <div class="radius-value">0px</div>
+          </div>
+          <div class="radius-item">
+            <div class="radius-visual" style="border-radius: 8px"></div>
+            <div class="radius-label">Small</div>
+            <div class="radius-value">8px (buttons, tabs)</div>
+          </div>
+          <div class="radius-item">
+            <div class="radius-visual" style="border-radius: 12px"></div>
+            <div class="radius-label">Medium</div>
+            <div class="radius-value">12px (cards)</div>
+          </div>
+          <div class="radius-item">
+            <div class="radius-visual" style="border-radius: 20px"></div>
+            <div class="radius-label">Pill</div>
+            <div class="radius-value">20px (badges)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Components -->
+      <section class="section">
+        <h2 class="section-title">Components</h2>
+
+        <!-- Top Navigation -->
+        <h3 class="section-subtitle">Top Navigation</h3>
+        <div class="header-preview">
+          <div class="header">
+            <div class="header-left">
+              <img src="images/lds_home_solid.png" alt="Home" width="24" height="24" style="flex-shrink: 0">
+              <div class="logo">Messenger</div>
+              <nav class="header-nav">
+                <a href="#">How to Use</a>
+                <a href="#">Foundation</a>
+                <a href="#" class="active">Components</a>
+                <a href="#">Guidelines</a>
+              </nav>
+            </div>
+            <div class="header-icons">
+              <div class="version-badge">v 1.0</div>
+              <div class="language-wrapper">
+                <img src="images/lds_earth_regular.png" alt="Language" class="header-icon" id="previewLanguageBtn" style="cursor: pointer;">
+                <div class="language-dropdown" id="previewLanguageDropdown">
+                  <div class="language-item">EN</div>
+                  <div class="language-item active">KR</div>
+                  <div class="language-item">JP</div>
+                </div>
+              </div>
+              <img src="images/lds_search_regular.png" alt="Search" class="header-icon">
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <h3 class="section-subtitle">Search Bar</h3>
+        <div class="search-preview">
+          <div class="search-bar-container">
+            <div class="search-bar-left">
+              <img src="images/lds_home_solid.png" alt="Home" class="search-bar-home-icon" width="24" height="24">
+            </div>
+            <div class="search-bar-right">
+              <img src="images/lds_search_regular.png" alt="Search" class="search-bar-icon">
+              <input type="text" class="search-bar-input" placeholder="Search LDSM">
+              <img src="images/lds_times_regular.png" alt="Close" class="search-bar-close">
+            </div>
+          </div>
+
+          <div class="search-bar-container">
+            <div class="search-bar-left">
+              <img src="images/lds_home_solid.png" alt="Home" class="search-bar-home-icon" width="24" height="24">
+            </div>
+            <div class="search-bar-right">
+              <img src="images/lds_search_regular.png" alt="Search" class="search-bar-icon">
+              <input type="text" class="search-bar-input" value="Banner">
+              <img src="images/lds_times_regular.png" alt="Close" class="search-bar-close">
+            </div>
+          </div>
+        </div>
+
+        <!-- Left Navigation -->
+        <h3 class="section-subtitle">Left Navigation</h3>
+        <div class="nav-preview">
+          <aside class="left-nav">
+            <div class="nav-category-title">Common Component</div>
+            <a href="#" class="nav-item">Badge</a>
+            <a href="#" class="nav-item">Banner</a>
+            <a href="#" class="nav-item">Bottom Navigation</a>
+            <a href="#" class="nav-item">Bottom Sheet</a>
+            <div class="nav-item nav-parent">Buttons</div>
+            <div class="nav-submenu">
+              <a href="#" class="nav-item active">Box Button</a>
+              <a href="#" class="nav-item">Capsule Button</a>
+              <a href="#" class="nav-item">Floating Action Button</a>
+              <a href="#" class="nav-item">Icon button</a>
+            </div>
+            <a href="#" class="nav-item">Chips</a>
+          </aside>
+          <div class="nav-content">
+            <h3>Selected Component</h3>
+            <p>
+              The left navigation provides easy access to all components and
+              foundation elements. Active items are highlighted with a
+              background color and bold text.
+            </p>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <h3 class="section-subtitle">Buttons</h3>
+        <div class="component-showcase">
+          <div class="component-row">
+            <div class="component-label">Normal</div>
+            <button class="btn-primary">
+              Figma Design
+              <svg
+                class="btn-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M7 7h10v10M7 17L17 7" />
+              </svg>
+            </button>
+          </div>
+          <div class="component-row">
+            <div class="component-label">Hover</div>
+            <button class="btn-primary-hover">
+              Wiki Documentation
+              <svg
+                class="btn-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M7 7h10v10M7 17L17 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Radio Buttons -->
+        <h3 class="section-subtitle">Radio Buttons</h3>
+        <div class="component-showcase">
+          <div class="component-row">
+            <div class="component-label">Unselected</div>
+            <div class="radio-group">
+              <div class="radio-item">
+                <div class="radio-circle">
+                  <div class="radio-dot"></div>
+                </div>
+                <div class="radio-label">Option 1</div>
+              </div>
+            </div>
+          </div>
+          <div class="component-row">
+            <div class="component-label">Selected</div>
+            <div class="radio-group">
+              <div class="radio-item">
+                <div class="radio-circle selected">
+                  <div class="radio-dot"></div>
+                </div>
+                <div class="radio-label">Option 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <h3 class="section-subtitle">Tabs</h3>
+        <div class="component-showcase">
+          <div class="tabs-container">
+            <div class="tabs">
+              <button class="tab active">Light</button>
+              <button class="tab">Dark</button>
+              <button class="tab">System</button>
+            </div>
+            <div class="tab-content">
+              <p style="color: #616161">
+                Tab content appears below the selected tab.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <h3 class="section-subtitle">Card</h3>
+
+        <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 16px">
+          Card Large
+        </h4>
+        <div class="component-showcase">
+          <div style="display: flex; gap: 24px; flex-wrap: wrap">
+            <div class="card">
+              <div class="card-image">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                  <rect x="20" y="20" width="40" height="80" fill="#00C73C" />
+                  <rect
+                    x="20"
+                    y="20"
+                    width="40"
+                    height="40"
+                    fill="#00C73C"
+                    opacity="0.6"
+                  />
+                  <rect x="65" y="20" width="35" height="50" fill="#000000" />
+                </svg>
+              </div>
+              <div class="card-content">
+                <div class="card-title">Layout Updated</div>
+                <div class="card-text">
+                  Define the Margin between the screen and the component. It has
+                  been updated so that you can check the margins used within the
+                  component.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                class="card-image"
+                style="background: #ffffff; border-bottom: 1px solid #e8e8e8"
+              >
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                  <circle cx="60" cy="60" r="30" fill="#4D73FF" />
+                  <rect
+                    x="35"
+                    y="35"
+                    width="50"
+                    height="50"
+                    fill="none"
+                    stroke="#FF334B"
+                    stroke-width="3"
+                  />
+                </svg>
+              </div>
+              <div class="card-content">
+                <div class="card-title">Component Library</div>
+                <div class="card-text">
+                  Buttons, tabs, radio buttons, and cards are built with
+                  consistent spacing and typography patterns.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="font-size: 20px; font-weight: 700; margin: 40px 0 16px 0">
+          Card Medium
+        </h4>
+        <div class="component-showcase">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(3, 320px);
+              gap: 30px;
+            "
+          >
+            <div class="card-medium">
+              <div class="card-medium-image">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                  <rect x="10" y="10" width="35" height="70" fill="#00C73C" />
+                  <rect
+                    x="10"
+                    y="10"
+                    width="35"
+                    height="35"
+                    fill="#00C73C"
+                    opacity="0.6"
+                  />
+                  <rect x="50" y="10" width="40" height="50" fill="#000000" />
+                </svg>
+              </div>
+              <div class="card-medium-title">Color</div>
+              <div class="card-medium-text">
+                The LINE Color Guide provides standardized colors and usage
+                guides to help designers continue creating a consistent brand
+                experience.
+              </div>
+            </div>
+            <div class="card-medium">
+              <div class="card-medium-image">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                  <circle cx="50" cy="50" r="25" fill="#4D73FF" />
+                  <rect
+                    x="30"
+                    y="30"
+                    width="40"
+                    height="40"
+                    fill="none"
+                    stroke="#FF334B"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <div class="card-medium-title">Iconography</div>
+              <div class="card-medium-text">
+                LINE icon is the most effective tool to send ideas and objects
+                to users.
+              </div>
+            </div>
+            <div class="card-medium">
+              <div class="card-medium-image">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                  <text
+                    x="20"
+                    y="50"
+                    font-family="LINE Seed Sans"
+                    font-size="40"
+                    font-weight="800"
+                    fill="#000000"
+                  >
+                    Aa
+                  </text>
+                </svg>
+              </div>
+              <div class="card-medium-title">Typography</div>
+              <div class="card-medium-text">
+                LINE Typography enables an efficient design and development
+                group tasks by selecting the system font for each OS.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <h3 class="section-subtitle">Footer</h3>
+        <div class="footer-preview">
+          <div class="footer">
+            <div class="footer-copyright">© LY Corporation</div>
+            <div class="footer-links">
+              <a href="#" class="footer-link">Terms of Use</a>
+              <a href="#" class="footer-link">FAQ</a>
+              <a href="#" class="footer-link">Contact Us</a>
+              <a href="#" class="footer-link">Github</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // Language dropdown toggle
+      const previewLanguageBtn = document.getElementById('previewLanguageBtn');
+      const previewLanguageDropdown = document.getElementById('previewLanguageDropdown');
+
+      if (previewLanguageBtn && previewLanguageDropdown) {
+        previewLanguageBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          previewLanguageDropdown.style.display = previewLanguageDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', function(e) {
+          if (!previewLanguageBtn.contains(e.target) && !previewLanguageDropdown.contains(e.target)) {
+            previewLanguageDropdown.style.display = 'none';
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

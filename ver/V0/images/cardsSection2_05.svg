@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>lds demo app</title>
+    <g id="LDSM_PC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1_LDSM_main_pc" transform="translate(-1412.000000, -1782.000000)">
+            <g id="main/resources" transform="translate(1344.000000, 1726.000000)">
+                <g id="lds-demo-app" transform="translate(68.000000, 56.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+                    <polygon id="Fill-1" fill="#000000" points="44.755 16.5187 29.302 63.9207 19 63.9207 34.453 16.5187"></polygon>
+                    <polygon id="Fill-2" fill="#1DCC64" points="34.4777 16.5187 49.9297 63.9207 60.2317 63.9207 44.7797 16.5187"></polygon>
+                    <polygon id="Fill-3" fill="#000000" points="45.7291 16.481 45.7421 16.519 45.7551 16.481"></polygon>
+                    <polygon id="Fill-4" fill="#00D74D" points="31.9213 16.481 31.9343 16.519 31.9473 16.481"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

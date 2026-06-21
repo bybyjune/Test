@@ -1,0 +1,788 @@
+/**
+ * Onboarding Site Design System - Components
+ *
+ * DESIGN.md의 components 섹션을 기반으로 한 컴포넌트 스타일입니다.
+ * 클래스 이름은 DESIGN.md의 토큰 이름과 정확히 일치합니다.
+ */
+
+/* ========================================
+   Global Styles
+   ======================================== */
+
+body {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   Top Navigation (상단 내비게이션)
+   ======================================== */
+
+.top-navi {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-border-light);
+  height: var(--height-top-navi);
+  padding: 0 var(--spacing-40);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.top-navi-left {
+  display: flex;
+  align-items: center;
+}
+
+.top-navi-left > a {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.top-navi-logo {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-brand-logo);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--color-ink);
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+/* 메뉴 div (마지막 자식) */
+.top-navi-left > div:last-child {
+  display: flex;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+.top-navi-right {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.top-navi-home-icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+.top-navi-item {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  color: #B7B7B7;
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.top-navi-item:hover,
+.top-navi-item.active {
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+/* ========================================
+   Version Badge
+   ======================================== */
+
+.version-badge {
+  background-color: transparent;
+  color: var(--color-ink);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-relaxed);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--rounded-pill);
+  padding: 6px 12px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ========================================
+   Header Icon
+   ======================================== */
+
+.header-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-ink);
+  cursor: pointer;
+}
+
+/* ========================================
+   Language Dropdown
+   ======================================== */
+
+.language-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-ink);
+  padding: 10px 0;
+  width: 80px;
+  z-index: 1000;
+  display: none;
+}
+
+.language-dropdown.active {
+  display: block;
+}
+
+.language-item {
+  height: 36px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-body-tertiary);
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.language-item:hover,
+.language-item.active {
+  color: var(--color-ink);
+}
+
+/* ========================================
+   Search Bar
+   ======================================== */
+
+.search-bar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border-bottom: 1px solid var(--color-border-light);
+  height: var(--height-top-navi);
+  padding: 0 var(--spacing-40);
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
+
+.search-bar.visible {
+  display: flex;
+}
+
+.search-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.search-input {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--color-ink);
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 450px;
+  height: 24px;
+}
+
+.search-input::placeholder {
+  color: #949494;
+}
+
+.search-close-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* ========================================
+   Left Navigation (왼쪽 내비게이션)
+   ======================================== */
+
+.left-nav {
+  background-color: var(--color-canvas);
+  border-right: 1px solid var(--color-border-light);
+  width: var(--width-left-nav);
+  padding: 33px 34px 40px 38px;
+  position: fixed;
+  left: 0;
+  top: var(--height-top-navi);
+  height: calc(100vh - var(--height-top-navi));
+  overflow-y: auto;
+  z-index: 50;
+}
+
+/* 커스텀 스크롤바 (hover 시에만 표시) */
+.left-nav::-webkit-scrollbar {
+  width: 8px;
+}
+
+.left-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.left-nav::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.left-nav:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.left-nav:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.left-nav-category-title {
+  font-family: var(--font-body);
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  color: var(--color-ink);
+  padding: 12px 0;
+  margin-bottom: 0;
+}
+
+.left-nav-item {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: 0;
+  color: var(--color-body-tertiary);
+  text-decoration: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: color var(--transition-base), font-weight var(--transition-base);
+}
+
+.left-nav-item:hover {
+  color: var(--color-ink);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.left-nav-item.active {
+  color: var(--color-ink);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.left-nav-item.nav-parent {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-body-tertiary);
+  cursor: pointer;
+  transition: color var(--transition-base), font-weight var(--transition-base);
+}
+
+.left-nav-item.nav-parent.open {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-ink);
+}
+
+.left-nav-item.nav-parent:hover {
+  color: var(--color-ink);
+  font-weight: var(--font-weight-bold);
+}
+
+.nav-submenu {
+  padding-left: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.nav-submenu.open {
+  max-height: 500px;
+}
+
+.nav-submenu .left-nav-item {
+  padding-left: 20px;
+}
+
+/* ========================================
+   Right Navigation (오른쪽 내비게이션)
+   ======================================== */
+
+.right-nav {
+  width: var(--width-right-nav);
+  padding: 60px 24px 80px 0;
+  position: sticky;
+  top: var(--height-top-navi);
+  height: calc(100vh - var(--height-top-navi));
+  overflow-y: auto;
+}
+
+.right-nav-item {
+  font-family: var(--font-body);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-body-disabled);
+  display: block;
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.right-nav-item.active {
+  color: var(--color-ink);
+}
+
+/* ========================================
+   Buttons (버튼)
+   ======================================== */
+
+.button-primary {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-border-default);
+  border-radius: 50px;
+  padding: 0 16px 0 24px;
+  height: var(--height-button);
+  gap: var(--spacing-8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.button-primary:hover {
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+  border-color: var(--color-ink);
+}
+
+.button-primary:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* ========================================
+   Radio Button (라디오 버튼)
+   ======================================== */
+
+.radio {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-border-medium);
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio.selected {
+  border-color: var(--color-primary);
+}
+
+.radio.selected::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+/* ========================================
+   Tab (탭)
+   ======================================== */
+
+.tab {
+  background-color: var(--color-canvas);
+  color: var(--color-body-tertiary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-relaxed);
+  border: 1px solid var(--color-border-default);
+  border-bottom: none;
+  border-radius: var(--rounded-sm) var(--rounded-sm) 0 0;
+  height: var(--height-tab);
+  min-width: 120px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.tab.selected {
+  background-color: var(--color-canvas-selected);
+  color: var(--color-ink-alt);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ========================================
+   Card (카드)
+   ======================================== */
+
+/* Card Large (기본) */
+.card-image {
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--rounded-none);
+  width: 100%;
+  aspect-ratio: 408 / 272;
+  margin-bottom: 22px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card:hover .card-image {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card-title {
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-normal);
+  color: var(--color-ink);
+  margin-bottom: 16px;
+}
+
+.card-text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-loose);
+  color: var(--color-body-secondary);
+}
+
+/* Card Medium */
+.card-medium-image {
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--rounded-none);
+  width: 100%;
+  aspect-ratio: 320 / 220;
+  margin-bottom: 16px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card-medium:hover .card-medium-image {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card-medium-title {
+  font-family: var(--font-body);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-normal);
+  color: var(--color-ink);
+  margin-bottom: 14px;
+}
+
+.card-medium-text {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-l);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-loose);
+  color: var(--color-body-secondary);
+}
+
+/* ========================================
+   Card Grid (반응형 그리드)
+   ======================================== */
+
+.card-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ========================================
+   Typography Components
+   ======================================== */
+
+.page-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-snug);
+  color: var(--color-ink);
+  padding: 80px 0 20px 0;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-snug);
+  color: var(--color-ink);
+  padding: 0 0 24px 0;
+}
+
+/* ========================================
+   Footer (푸터)
+   ======================================== */
+
+.footer {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  border-top: 1px solid var(--color-border-light);
+  padding: var(--spacing-40);
+  margin-left: var(--width-left-nav);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-ink);
+}
+
+.footer-links {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-links:hover .footer-link {
+  color: #B7B7B7;
+}
+
+.footer-link {
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.footer-link:hover {
+  color: var(--color-ink) !important;
+  text-decoration: none;
+}
+
+/* ========================================
+   레이아웃 유틸리티
+   ======================================== */
+
+.page-container {
+  display: flex;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0 var(--spacing-80);
+  margin-left: var(--width-left-nav);
+  margin-bottom: 120px;
+}
+
+/* ========================================
+   Hamburger Menu (햄버거 메뉴)
+   ======================================== */
+
+.hamburger-menu {
+  display: none; /* 기본적으로 숨김 */
+  width: 24px;
+  height: 12px;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+  margin-right: 12px;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-ink);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger-menu span:nth-child(2) {
+  bottom: 0;
+}
+
+/* X 모양으로 변환 */
+.hamburger-menu.open span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+/* Mobile Overlay (오버레이) */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.mobile-overlay.visible {
+  display: block;
+  opacity: 1;
+}
+
+/* ========================================
+   반응형 (Responsive)
+   ======================================== */
+
+/* 태블릿 (769px - 1024px) */
+@media (max-width: 1024px) {
+  .right-nav {
+    display: none;
+  }
+
+  .card-medium-image {
+    max-width: 100%;
+  }
+
+  .card-grid-4,
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* 모바일 (≤ 768px) */
+@media (max-width: 768px) {
+  .top-navi {
+    padding: 0 var(--spacing-40);
+  }
+
+  /* 햄버거 메뉴 표시 */
+  .hamburger-menu {
+    display: flex; /* 모바일에서만 표시 */
+  }
+
+  /* home icon 숨김 (hamburger가 그 자리 대체) */
+  .top-navi-left > a {
+    display: none;
+  }
+
+  /* Left Navigation - 왼쪽 밖에 숨김 */
+  .left-nav {
+    position: fixed;
+    top: var(--height-top-navi);
+    left: -292px;
+    width: 272px;
+    height: calc(100vh - var(--height-top-navi));
+    z-index: 100;
+    transition: left var(--transition-base);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .left-nav.open {
+    left: 0;
+  }
+
+  .main-content {
+    padding: 0 var(--spacing-24);
+    margin-left: 0;
+  }
+
+  .footer {
+    margin-left: 0;
+  }
+
+  .page-title {
+    font-size: 32px;
+    padding: 60px 0 16px 0;
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-medium-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card-grid-4,
+  .card-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .search-bar {
+    padding: 0 var(--spacing-40);
+  }
+
+  .search-input {
+    width: 200px;
+  }
+}
