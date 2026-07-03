@@ -48,7 +48,7 @@ body {
 .top-navi-logo {
   font-family: var(--font-heading);
   font-size: var(--font-size-brand-logo);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--color-ink);
   flex-shrink: 0;
@@ -481,7 +481,7 @@ body {
 .card-title {
   font-family: var(--font-body);
   font-size: 28px;
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-normal);
   color: var(--color-ink);
   margin-bottom: 16px;
@@ -514,7 +514,7 @@ body {
 .card-medium-title {
   font-family: var(--font-body);
   font-size: var(--font-size-h4);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-normal);
   color: var(--color-ink);
   margin-bottom: 14px;
@@ -551,7 +551,7 @@ body {
 .page-title {
   font-family: var(--font-heading);
   font-size: var(--font-size-display);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-snug);
   color: var(--color-ink);
   padding: 80px 0 20px 0;
@@ -560,7 +560,7 @@ body {
 .section-title {
   font-family: var(--font-heading);
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-snug);
   color: var(--color-ink);
   padding: 0 0 24px 0;

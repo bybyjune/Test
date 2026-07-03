@@ -30,37 +30,37 @@ typography:
   hero: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 60px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.2
     letterSpacing: 0px
   display: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 48px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.2
     letterSpacing: 0px
   h1: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 40px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.2
     letterSpacing: 0px
   h2: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 32px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.2
     letterSpacing: 0px
   h3: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 28px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.3
     letterSpacing: 0px
   h4: # SF Pro Text
     fontFamily: "SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 20px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.3
     letterSpacing: 0px
   h5: # SF Pro Text
@@ -120,7 +120,7 @@ typography:
   brand-logo: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 19px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.0
     letterSpacing: 0px
 
@@ -355,7 +355,7 @@ components:
   card-title:
     fontFamily: "SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 28px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.3
     letterSpacing: 0px
     textColor: "{colors.ink}"
@@ -402,7 +402,7 @@ components:
 
 Onboarding site design system Site는 (https://designsystem.linecorp.com/) **LINE Green** (#00C73C)을 단일 주요 액션 색상으로 사용하는 문서 중심 인터페이스입니다.
 여유로운 여백, 고정된 왼쪽 내비게이션(272px), 깔끔한 헤더(88px), 모듈식 콘텐츠 섹션을 통해 명확성과 사용성을 우선합니다.
-타이포그래피는 모든 제목에 **LINE Seed Sans**(800 weight)를 사용하고 본문에는 **SF Pro Text**(400 weight)를 사용하여 자신감 있으면서도 친근한 읽기 경험을 제공합니다.
+타이포그래피는 모든 제목에 **LINE Seed Sans**(Bold, 700 weight)를 사용하고 본문에는 **SF Pro Text**(400 weight)를 사용하여 자신감 있으면서도 친근한 읽기 경험을 제공합니다.
 
 이 시스템은 디자인 시스템 문서 사이트(컴포넌트 페이지, 파운데이션 페이지, 가이드라인)를 위해 만들어졌으며, 콘텐츠와 예제가 숨쉴 수 있도록 하는 것이 목표입니다.
 모든 페이지는 일관된 3단 레이아웃을 따릅니다: 구조를 위한 왼쪽 내비게이션, 문서를 위한 메인 콘텐츠, 앵커 링크를 위한 선택적 오른쪽 내비게이션.
@@ -414,7 +414,7 @@ Onboarding site design system Site는 (https://designsystem.linecorp.com/) **LIN
 - 고정된 왼쪽 내비게이션(272px): 카테고리 그룹화 및 선택 상태 강조
 - 깔끔한 헤더(88px): 로고, 가로 내비게이션, 버전 배지
 - 여유로운 간격: 페이지 패딩 80px, 섹션 간격 40px, 카드 패딩 24px
-- 타이포그래피 계층: 제목은 LINE Seed Sans(extra-bold, 800), 본문은 SF Pro Text(regular, 400)
+- 타이포그래피 계층: 제목은 LINE Seed Sans(bold, 700), 본문은 SF Pro Text(regular, 400)
 - 최소한의 테두리: 카드와 구분선에 1px #E8E8E8, 미묘한 분리에 #EFEFEF
 - Radius 스케일: 버튼/작은 요소 8px, 카드 12px, 배지 20px
 - 화이트 중심 색상 시스템: #FFFFFF 기본, 내비게이션 #FBFBFB, 선택 상태 #EFEFEF
@@ -462,49 +462,49 @@ Onboarding site design system Site는 (https://designsystem.linecorp.com/) **LIN
 ### 색상 철학
 
 Onboarding site design system은 **단일 강조 접근 방식**을 사용합니다: LINE Green이 모든 주요 액션을 담당합니다. 보조 브랜드 색상은 없습니다.
-강조는 색상 다양성이 아닌 타이포그래피 weight(제목 800, 레이블 700, 본문 400)와 표면 변화(white → #FBFBFB → #EFEFEF)에서 나옵니다.
+강조는 색상 다양성이 아닌 타이포그래피 weight(제목 700, 레이블 700, 본문 400)와 표면 변화(white → #FBFBFB → #EFEFEF)에서 나옵니다.
 테두리는 속삭이듯 부드럽고(#E8E8E8, #EFEFEF) 콘텐츠와 경쟁하지 않습니다.
 
 ## 타이포그래피
 
 ### 폰트 패밀리
 
-- **제목**: `LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif` — LINE의 독점 브랜드 서체. 모든 제목, 내비게이션 카테고리 제목, 로고에 사용. 항상 weight 700–900으로 설정.
+- **제목**: `LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif` — LINE의 독점 브랜드 서체. 모든 제목, 내비게이션 카테고리 제목, 로고에 사용. Bold(700)로 설정.
 - **본문**: `SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif` — UI와 본문 텍스트에 최적화된 Apple 시스템 폰트. 단락, 설명, 내비게이션 항목, 버튼, 레이블에 사용. 본문은 weight 400, 강조는 600–700.
 
 ### 계층
 
 | 토큰                      | 크기 | Weight | Line Height | Letter Spacing | 용도                                         |
 | ------------------------- | ---- | ------ | ----------- | -------------- | -------------------------------------------- |
-| `{typography.hero}`       | 60px | 800    | 1.2         | 0              | 랜딩 페이지의 히어로 헤드라인                |
-| `{typography.display}`    | 48px | 800    | 1.2         | 0              | 페이지 메인 타이틀 (Box Button, Radio 등)    |
-| `{typography.h1}`         | 40px | 800    | 1.2         | 0              | 주요 섹션 제목                               |
-| `{typography.h2}`         | 32px | 800    | 1.2         | 0              | 섹션 제목 (Anatomy, States, Types)           |
-| `{typography.h3}`         | 28px | 800    | 1.3         | 0              | 하위 섹션 제목                               |
-| `{typography.h4}`         | 20px | 800    | 1.3         | 0              | 카드 제목, 하위 섹션 레이블                  |
+| `{typography.hero}`       | 60px | 700    | 1.2         | 0              | 랜딩 페이지의 히어로 헤드라인                |
+| `{typography.display}`    | 48px | 700    | 1.2         | 0              | 페이지 메인 타이틀 (Box Button, Radio 등)    |
+| `{typography.h1}`         | 40px | 700    | 1.2         | 0              | 주요 섹션 제목                               |
+| `{typography.h2}`         | 32px | 700    | 1.2         | 0              | 섹션 제목 (Anatomy, States, Types)           |
+| `{typography.h3}`         | 28px | 700    | 1.3         | 0              | 하위 섹션 제목                               |
+| `{typography.h4}`         | 20px | 700    | 1.3         | 0              | 카드 제목, 하위 섹션 레이블                  |
 | `{typography.h5}`         | 18px | 700    | 1.3         | 0              | 설명 제목, 강조된 레이블                     |
 | `{typography.h6}`         | 17px | 700    | 1.2         | 0              | 내비게이션 카테고리 제목, 상단 내비게이션    |
 | `{typography.body}`       | 16px | 400    | 1.6         | 0              | 기본 본문 텍스트, 버튼 레이블                |
 | `{typography.body-sm}`    | 15px | 400    | 1.5         | 0              | 작은 본문 텍스트, 내비게이션 항목, 탭 레이블 |
 | `{typography.label}`      | 14px | 700    | 1.5         | 0              | 레이블, 상태 레이블, 버전 배지               |
 | `{typography.caption}`    | 13px | 500    | 1.5         | 0              | 캡션, 푸터 텍스트, 작은 글씨                 |
-| `{typography.brand-logo}` | 19px | 800    | 1.0         | 0              | 헤더 로고 ("Messenger")                      |
+| `{typography.brand-logo}` | 19px | 700    | 1.0         | 0              | 헤더 로고 ("Messenger")                      |
 
 ### 원칙
 
-- **모든 제목에 LINE Seed Sans weight 800 사용.** 각 섹션을 프레임화하는 대담하고 자신감 있는 목소리를 만듭니다. Weight 700은 H5와 H6에서만 사용되며 약간 가벼운 터치가 필요한 곳에 사용됩니다.
+- **모든 제목에 LINE Seed Sans weight 700(Bold) 사용.** 각 섹션을 프레임화하는 대담하고 자신감 있는 목소리를 만듭니다. SF Pro Text 제목(h4)과 레이블(h5, label)도 weight 700을 사용합니다.
 - **모든 본문에 SF Pro Text weight 400 사용.** 깨끗하고 읽기 쉬우며 중립적입니다. Weight 600–700은 인라인 강조와 레이블을 위해 예약됩니다.
 - **16px 본문 텍스트, 14px나 15px가 아닌.** Onboarding site design system은 문서 규모에서 편안한 읽기를 위해 본문을 16px로 실행합니다.
 - **본문 텍스트에 1.6 line-height.** 여유로운 leading은 읽기 우선 경험을 만듭니다. 제목은 임팩트를 위해 1.2–1.3으로 타이트합니다.
 - **모든 타이포그래피 레벨에서 Letter-spacing은 0px.** 웹 브라우저는 디자인 도구와 다르게 letter-spacing을 렌더링하므로 실제 구현에서는 마이너스 트래킹이 적용되지 않습니다.
-- **Weight 사다리: 400 / 500 / 600 / 700 / 800 / 900.** 본문은 400. 레이블은 700. 제목은 800. 브랜드 로고만 900.
+- **Weight 사다리: 400 / 500 / 600 / 700 / 800 / 900.** 본문은 400. 레이블과 제목은 700(Bold).
 
 ### 폰트 대체
 
 LINE Seed Sans는 LINE의 독점 서체입니다. 오프브랜드 빌드 시:
 
 - 폴백 스택으로 `system-ui, -apple-system, BlinkMacSystemFont` 사용 — macOS/iOS에서 SF Pro로 해결됩니다.
-- 비Apple 플랫폼의 경우, **Inter** (Google Fonts, variable) weight 800과 `font-feature-settings: "ss03"`이 LINE Seed Sans의 특성을 근사합니다.
+- 비Apple 플랫폼의 경우, **Inter** (Google Fonts, variable) weight 700과 `font-feature-settings: "ss03"`이 LINE Seed Sans의 특성을 근사합니다.
 - SF Pro Text 본문의 경우, Inter weight 400이 가까운 대체입니다.
 
 ## 레이아웃
@@ -597,7 +597,7 @@ Onboarding site design system은 문서가 숨쉴 수 있도록 여유로운 여
 
 `**home-icon**` — 24x24px 단순 집 모양 아이콘, 검정 fill (#000000). 문이 있는 집 실루엣을 형성하는 단일 경로. 모바일에서는 숨김 처리되고 hamburger가 대체.
 
-`**logo**` — `{typography.brand-logo}` (LINE Seed Sans 16px / 900)의 "Messenger", 색상 `{colors.ink}`.
+`**logo**` — `{typography.brand-logo}` (LINE Seed Sans 19px / 700)의 "Messenger", 색상 `{colors.ink}`.
 
 `**nav-item**` — 가로 내비게이션 링크. 폰트 패밀리: LINE Seed Sans, 크기: 17px, weight: 700, letter-spacing: 0px. 기본 색상 `{colors.body-tertiary}` (#B7B7B7), 활성 상태 색상 `{colors.ink}` (#000000). 호버 전환: 색상 0.2s. 항목 간 갭: 40px.
 
@@ -661,11 +661,11 @@ Border-radius 규칙: 모든 탭은 첫 번째 탭의 왼쪽 상단 모서리(8p
 
 `**card-image**` — 이미지 컨테이너. 배경 `{colors.canvas}` (#FFFFFF), 테두리 `1px solid {colors.border-default}` (#E8E8E8), border-radius 0px(평면, 라운딩 없음), 너비 `100%`, aspect-ratio `408/272` (비율 유지), margin-bottom 22px. 그리드 안에서 유동적으로 크기 조절됨. 컴포넌트 일러스트레이션, 다이어그램, 미리보기 이미지 표시에 사용.
 
-`**card-title**` — 이미지 아래 카드 제목. 폰트 패밀리: SF Pro Text, 크기: 28px, weight: 800, line-height: 1.3, letter-spacing: 0px, 색상 `{colors.ink}` (#000000), margin-bottom 16px.
+`**card-title**` — 이미지 아래 카드 제목. 폰트 패밀리: SF Pro Text, 크기: 28px, weight: 700, line-height: 1.3, letter-spacing: 0px, 색상 `{colors.ink}` (#000000), margin-bottom 16px.
 
 `**card-text**` — 제목 아래 카드 설명. 폰트 패밀리: SF Pro Text, 크기: 18px, weight: 400, line-height: 1.6, 색상 `{colors.body-secondary}` (#616161).
 
-구조: 이미지 박스(408×272px, 1px #E8E8E8 테두리, 평면) → 22px 갭 → 텍스트 컨테이너(5px 상단 패딩) → 제목(28px / 800) → 16px 갭 → 설명(18px). 이미지, 제목, 설명은 **컨테이너로 감싸지지 않습니다** — 정의된 간격으로 수직으로 쌓인 별도 요소입니다. 텍스트 컨테이너는 시각적 정렬을 위해 5px 상단 패딩을 가집니다.
+구조: 이미지 박스(408×272px, 1px #E8E8E8 테두리, 평면) → 22px 갭 → 텍스트 컨테이너(5px 상단 패딩) → 제목(28px / 700) → 16px 갭 → 설명(18px). 이미지, 제목, 설명은 **컨테이너로 감싸지지 않습니다** — 정의된 간격으로 수직으로 쌓인 별도 요소입니다. 텍스트 컨테이너는 시각적 정렬을 위해 5px 상단 패딩을 가집니다.
 
 **인터랙티브 상태(카드가 링크일 때):** 호버 시 **이미지만** `transform: translateY(-4px)`로 4px 위로 올라가고 미묘한 섀도우 `0 6px 12px rgba(0,0,0,0.06)`를 얻습니다. 텍스트(제목과 설명)는 제자리에 유지됩니다. 전환: `all 0.2s ease`. 전체 카드에 Cursor: pointer.
 
@@ -681,11 +681,11 @@ Border-radius 규칙: 모든 탭은 첫 번째 탭의 왼쪽 상단 모서리(8p
 
 `**card-medium-image**` — 그리드 레이아웃용 중간 크기 이미지 컨테이너. 배경 `{colors.canvas}` (#FFFFFF), 테두리 `1px solid {colors.border-default}` (#E8E8E8), border-radius 0px(평면), 너비 `100%`, aspect-ratio `320/220` (비율 유지), margin-bottom 16px. 그리드 안에서 유동적으로 크기 조절됨.
 
-`**card-medium-title**` — 중간 카드 제목. 폰트 패밀리: SF Pro Text, 크기: 20px, weight: 800, line-height: 1.3, letter-spacing: 0px, 색상 `{colors.ink}` (#000000), margin-bottom 14px.
+`**card-medium-title**` — 중간 카드 제목. 폰트 패밀리: SF Pro Text, 크기: 20px, weight: 700, line-height: 1.3, letter-spacing: 0px, 색상 `{colors.ink}` (#000000), margin-bottom 14px.
 
 `**card-medium-text**` — 중간 카드 설명. 폰트 패밀리: SF Pro Text, 크기: 16px, weight: 400, line-height: 1.6, 색상 `{colors.body-secondary}` (#616161).
 
-구조: 이미지 박스(최대 320×220px, 비율 유지) → 16px 갭 → 텍스트 컨테이너(5px 상단 패딩) → 제목(20px / 800) → 14px 갭 → 설명(16px). Card Large와 동일한 수직 스태킹 패턴, 30px 갭의 3~4컬럼 그리드 레이아웃에 최적화. 텍스트 컨테이너는 시각적 정렬을 위해 5px 상단 패딩을 가집니다.
+구조: 이미지 박스(최대 320×220px, 비율 유지) → 16px 갭 → 텍스트 컨테이너(5px 상단 패딩) → 제목(20px / 700) → 14px 갭 → 설명(16px). Card Large와 동일한 수직 스태킹 패턴, 30px 갭의 3~4컬럼 그리드 레이아웃에 최적화. 텍스트 컨테이너는 시각적 정렬을 위해 5px 상단 패딩을 가집니다.
 
 **인터랙티브 상태(카드가 링크일 때):** 호버 시 **이미지만** `transform: translateY(-4px)`로 4px 위로 올라가고 미묘한 섀도우 `0 6px 12px rgba(0,0,0,0.06)`를 얻습니다. 텍스트(제목과 설명)는 제자리에 유지됩니다. 전환: `all 0.2s ease`. 전체 카드에 Cursor: pointer.
 
@@ -704,9 +704,9 @@ Border-radius 규칙: 모든 탭은 첫 번째 탭의 왼쪽 상단 모서리(8p
 
 ### 타이포그래피 컴포넌트
 
-`**page-title**` — 메인 페이지 제목. Typography `{typography.display}` (48px / 800), 색상 `{colors.ink}`, 패딩 `80px 0 20px 0`(숨쉴 공간을 위한 80px 상단).
+`**page-title**` — 메인 페이지 제목. Typography `{typography.display}` (48px / 700), 색상 `{colors.ink}`, 패딩 `80px 0 20px 0`(숨쉴 공간을 위한 80px 상단).
 
-`**section-title**` — 섹션 제목("Anatomy", "States", "Types"). Typography `{typography.h2}` (32px / 800), 색상 `{colors.ink}`, 패딩 `0 0 24px 0`.
+`**section-title**` — 섹션 제목("Anatomy", "States", "Types"). Typography `{typography.h2}` (32px / 700), 색상 `{colors.ink}`, 패딩 `0 0 24px 0`.
 
 ### 푸터 (Footer)
 
@@ -716,10 +716,10 @@ Border-radius 규칙: 모든 탭은 첫 번째 탭의 왼쪽 상단 모서리(8p
 
 ### 해야 할 것
 
-- **정확한 토큰 이름을 클래스 이름으로 사용.** DESIGN.md에 정의된 스타일을 적용할 때 수정 없이 토큰 이름을 직접 CSS 클래스 이름으로 사용합니다. 예: Display 타이포그래피(48px/800/1.2)는 `<h1 class="display">`, H2 타이포그래피(32px/800/1.2)는 `<h2 class="h2">`.
+- **정확한 토큰 이름을 클래스 이름으로 사용.** DESIGN.md에 정의된 스타일을 적용할 때 수정 없이 토큰 이름을 직접 CSS 클래스 이름으로 사용합니다. 예: Display 타이포그래피(48px/700/1.2)는 `<h1 class="display">`, H2 타이포그래피(32px/700/1.2)는 `<h2 class="h2">`.
 - **토큰 이름을 변경하지 마세요.** DESIGN.md에서 `display`를 정의하면 `class="display"`를 사용 — `class="page-title"`, `class="main-heading"` 또는 다른 이름이 아닙니다. 토큰 이름은 제안이 아니라 HTML/CSS에서 사용할 정확한 클래스 이름입니다.
 - 모든 주요 액션에 `{colors.primary}` (LINE Green #00C73C) 사용 — 버튼, 활성 상태, 선택된 라디오 버튼, 포커스 표시기.
-- 모든 제목을 LINE Seed Sans weight 800으로 설정. 이것이 브랜드 목소리입니다.
+- 모든 제목을 LINE Seed Sans weight 700(Bold)으로 설정. 이것이 브랜드 목소리입니다.
 - 모든 본문 텍스트를 SF Pro Text weight 400, 16px 크기, 1.6 line-height로 설정. 이것이 읽기 목소리입니다.
 - 카드와 컴포넌트 컨테이너에 `{colors.border-default}` (#E8E8E8)의 1px 테두리 사용. 테두리를 미묘하게 유지.
 - 메인 콘텐츠 영역에 80px 가로 패딩, 카드 내부에 24px, 내비게이션에 32px 적용.
@@ -732,7 +732,7 @@ Border-radius 규칙: 모든 탭은 첫 번째 탭의 왼쪽 상단 모서리(8p
 ### 하지 말아야 할 것
 
 - **구현 시 토큰 이름을 변경하지 마세요.** AI 도구는 종종 DESIGN.md 토큰을 구현할 때 `page-title`이나 `section-heading` 같은 "시맨틱" 클래스 이름을 만들려고 시도합니다. 이것은 시스템을 깨뜨립니다. 항상 정확한 토큰 이름 사용: `display`, `h2`, `body` 등.
-- **토큰 값을 수정하지 마세요.** `display`가 48px/800/1.2이면 CSS에서 정확히 그 값을 사용합니다. "더 보기 좋게" 만들려고 46px로 조정하거나 line-height를 1.3으로 변경하지 마세요 — 그것은 시스템을 깨뜨립니다.
+- **토큰 값을 수정하지 마세요.** `display`가 48px/700/1.2이면 CSS에서 정확히 그 값을 사용합니다. "더 보기 좋게" 만들려고 46px로 조정하거나 line-height를 1.3으로 변경하지 마세요 — 그것은 시스템을 깨뜨립니다.
 - 여러 강조색을 사용하지 마세요 — LINE Green이 전체 시스템의 단일 액션 색상입니다.
 - 제목을 SF Pro Text로 설정하거나 본문 텍스트를 LINE Seed Sans로 설정하지 마세요 — 폰트 페어링은 의도적이고 엄격합니다.
 - 본문 텍스트에 weight 500이나 weight 600을 사용하지 마세요 — 본문은 항상 400입니다. 강조된 본문은 700(레이블) 사용.
@@ -741,7 +741,7 @@ Border-radius 규칙: 모든 탭은 첫 번째 탭의 왼쪽 상단 모서리(8p
 - 4px 기본 단위 아래로 간격을 줄이지 마세요 — 구조적 리듬은 8/12/16/24 배수에 의존합니다.
 - 탭의 네 모서리를 모두 둥글게 하지 마세요 — 탭은 콘텐츠와 연결하기 위해 `8px 8px 0 0`(상단 모서리만) 사용.
 - 순수 검정 테두리를 사용하지 마세요 — 테두리는 항상 부드러운 느낌을 위해 #E8E8E8, #EFEFEF, #B7B7B7입니다.
-- 내비게이션 항목이나 탭을 weight 800으로 설정하지 마세요 — 800은 페이지/섹션 제목만을 위해 예약됩니다.
+- 내비게이션 항목이나 탭에 extrabold(800)를 사용하지 마세요 — 제목과 UI 레이블은 Bold(700)입니다.
 - 본문 텍스트의 line-height를 1.6 이하로 줄이지 마세요 — 여유로운 leading은 읽기 경험의 일부입니다.
 
 ## 반응형 동작
@@ -780,7 +780,7 @@ Border-radius 규칙: 모든 탭은 첫 번째 탭의 왼쪽 상단 모서리(8p
 
 1. 어디서나 `{token.refs}`를 사용하여 토큰 참조 — hex 코드나 픽셀 값을 직접 입력하지 마세요.
 2. 새 컴포넌트를 추가할 때 먼저 `components:` YAML 프론트매터에 모든 상태(`-active`, `-pressed`, `-selected`)와 함께 정의한 다음 사용 컨텍스트와 함께 Components 섹션에 문서화합니다.
-3. 제목은 항상 LINE Seed Sans weight 800 사용. 본문은 항상 SF Pro Text weight 400 사용. 이것은 협상 불가능합니다.
+3. 제목은 항상 LINE Seed Sans weight 700(Bold) 사용. 본문은 항상 SF Pro Text weight 400 사용. 이것은 협상 불가능합니다.
 4. 단일 강조색은 LINE Green (#00C73C)입니다. 보조 브랜드 색상은 존재하지 않습니다. LINE Red (#FF334B)와 Link (#4D73FF)는 기능적 색상이지 브랜드 강조색이 아닙니다.
 5. #E8E8E8 또는 #EFEFEF의 1px 테두리 사용. 섀도우나 그라데이션을 사용하지 마세요.
 6. 간격에 대해 확신이 없을 때: 페이지/섹션 패딩에 80px, 카드 패딩에 24px, 컴포넌트 갭에 16px, 마이크로 간격에 4px 사용.

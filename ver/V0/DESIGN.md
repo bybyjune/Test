@@ -31,37 +31,37 @@ typography:
   hero: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 60px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.2
     letterSpacing: 0px
   display: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 48px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.2
     letterSpacing: 0px
   h1: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 40px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.2
     letterSpacing: 0px
   h2: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 32px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.2
     letterSpacing: 0px
   h3: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 28px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.3
     letterSpacing: 0px
   h4: # SF Pro Text
     fontFamily: "SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 20px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.3
     letterSpacing: 0px
   h5: # SF Pro Text
@@ -103,7 +103,7 @@ typography:
   brand-logo: # LINE Seed Sans
     fontFamily: "LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 19px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.0
     letterSpacing: 0px
 
@@ -298,7 +298,7 @@ components:
   card-title:
     fontFamily: "SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: 28px
-    fontWeight: 800
+    fontWeight: 700
     lineHeight: 1.3
     letterSpacing: 0px
     textColor: "{colors.ink}"
@@ -333,7 +333,7 @@ textColor: "{colors.ink}"
 
 ## Overview
 
-LINE Design System is a documentation-first interface built around **LINE Green** (#00C73C) as the single primary action color. The design prioritizes clarity and usability through generous white space, a persistent left navigation (260px), a clean header (88px), and modular content sections. Typography pairs **LINE Seed Sans** (800 weight) for all headings with **SF Pro Text** (400 weight) for body copy, creating a confident but approachable reading experience.
+LINE Design System is a documentation-first interface built around **LINE Green** (#00C73C) as the single primary action color. The design prioritizes clarity and usability through generous white space, a persistent left navigation (260px), a clean header (88px), and modular content sections. Typography pairs **LINE Seed Sans** (Bold, 700 weight) for all headings with **SF Pro Text** (400 weight) for body copy, creating a confident but approachable reading experience.
 
 The system is built for design system documentation sites — component pages, foundation pages, and guidelines — where the goal is to let the content and examples breathe. Every page follows a consistent three-column layout: left navigation for structure, main content for documentation, and optional right navigation for anchor links. Interaction is minimal and deliberate: LINE Green for primary actions, subtle hover states, and clean borders for separation.
 
@@ -343,7 +343,7 @@ The system is built for design system documentation sites — component pages, f
 - Persistent left navigation (260px) with category grouping and selected state highlighting
 - Clean header (88px) with logo, horizontal navigation, and version badge
 - Generous spacing: 80px for page padding, 40px for section spacing, 24px for card padding
-- Typography hierarchy: LINE Seed Sans (extra-bold, 800) for headings, SF Pro Text (regular, 400) for body
+- Typography hierarchy: LINE Seed Sans (bold, 700) for headings, SF Pro Text (regular, 400) for body
 - Minimal borders: 1px #E8E8E8 for cards and dividers, #EFEFEF for subtle separation
 - Radius scale: 8px for buttons/small elements, 12px for cards, 20px for badges
 - White-first color system: #FFFFFF base, #FBFBFB for navigation, #EFEFEF for selected states
@@ -390,13 +390,13 @@ The system is built for design system documentation sites — component pages, f
 
 ### Color Philosophy
 
-LINE Design System uses a **single-accent approach**: LINE Green carries all primary actions. There is no secondary brand color. Emphasis comes from typography weight (800 for headings, 700 for labels, 400 for body) and surface changes (white → #FBFBFB → #EFEFEF) rather than color variety. Borders are whisper-soft (#E8E8E8, #EFEFEF) and never compete with content.
+LINE Design System uses a **single-accent approach**: LINE Green carries all primary actions. There is no secondary brand color. Emphasis comes from typography weight (700 for headings, 700 for labels, 400 for body) and surface changes (white → #FBFBFB → #EFEFEF) rather than color variety. Borders are whisper-soft (#E8E8E8, #EFEFEF) and never compete with content.
 
 ## Typography
 
 ### Font Families
 
-- **Heading**: `LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif` — LINE's proprietary brand typeface. Used for all headings, navigation category titles, and the logo. Always set at weight 700–900.
+- **Heading**: `LINE Seed Sans, -apple-system, BlinkMacSystemFont, sans-serif` — LINE's proprietary brand typeface. Used for all headings, navigation category titles, and the logo. Set at Bold (700).
 - **Body**: `SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif` — Apple's system font optimized for UI and body text. Used for paragraphs, descriptions, navigation items, buttons, and labels. Weight 400 for body, 600–700 for emphasis.
 
 ### Hierarchy
@@ -404,36 +404,36 @@ LINE Design System uses a **single-accent approach**: LINE Green carries all pri
 
 | Token                     | Size | Weight | Line Height | Letter Spacing | Use                                           |
 | ------------------------- | ---- | ------ | ----------- | -------------- | --------------------------------------------- |
-| `{typography.hero}`       | 60px | 800    | 1.2         | 0              | Hero headlines on landing pages               |
-| `{typography.display}`    | 48px | 800    | 1.2         | 0              | Page main titles (Box Button, Radio, etc.)    |
-| `{typography.h1}`         | 40px | 800    | 1.2         | 0              | Major section headings                        |
-| `{typography.h2}`         | 32px | 800    | 1.2         | 0              | Section titles (Anatomy, States, Types)       |
-| `{typography.h3}`         | 28px | 800    | 1.3         | 0              | Sub-section headings                          |
-| `{typography.h4}`         | 20px | 800    | 1.3         | 0              | Card titles, sub-section labels               |
+| `{typography.hero}`       | 60px | 700    | 1.2         | 0              | Hero headlines on landing pages               |
+| `{typography.display}`    | 48px | 700    | 1.2         | 0              | Page main titles (Box Button, Radio, etc.)    |
+| `{typography.h1}`         | 40px | 700    | 1.2         | 0              | Major section headings                        |
+| `{typography.h2}`         | 32px | 700    | 1.2         | 0              | Section titles (Anatomy, States, Types)       |
+| `{typography.h3}`         | 28px | 700    | 1.3         | 0              | Sub-section headings                          |
+| `{typography.h4}`         | 20px | 700    | 1.3         | 0              | Card titles, sub-section labels               |
 | `{typography.h5}`         | 18px | 700    | 1.3         | 0              | Description titles, emphasized labels         |
 | `{typography.h6}`         | 17px | 700    | 1.2         | 0              | Navigation category titles, top nav           |
 | `{typography.body}`       | 16px | 400    | 1.6         | 0              | Default body text, button labels              |
 | `{typography.body-sm}`    | 15px | 400    | 1.5         | 0              | Small body text, navigation items, tab labels |
 | `{typography.label}`      | 14px | 700    | 1.5         | 0              | Labels, state labels, version badge           |
 | `{typography.caption}`    | 13px | 500    | 1.5         | 0              | Captions, footer text, fine print             |
-| `{typography.brand-logo}` | 16px | 900    | 1.0         | 0              | Header logo ("Messenger")                     |
+| `{typography.brand-logo}` | 19px | 700    | 1.0         | 0              | Header logo ("Messenger")                     |
 
 
 ### Principles
 
-- **LINE Seed Sans at weight 800 for all headings.** This creates a bold, confident voice that frames every section. Weight 700 is used only for H5 and H6 where a slightly lighter touch is needed.
+- **LINE Seed Sans at weight 700 (Bold) for all headings.** This creates a bold, confident voice that frames every section. SF Pro Text headings (h4) and labels (h5, label) also use weight 700.
 - **SF Pro Text at weight 400 for all body copy.** Clean, readable, neutral. Weight 600–700 is reserved for inline emphasis and labels.
 - **16px body text, not 14px or 15px.** LINE Design System runs body at 16px for comfortable reading at documentation scale.
 - **1.6 line-height for body text.** Generous leading creates a reading-first experience. Headings tighten to 1.2–1.3 for impact.
 - **Letter-spacing is 0px for all typography levels.** Web browsers render letter-spacing differently than design tools, so no negative tracking is applied in the actual implementation.
-- **Weight ladder: 400 / 500 / 600 / 700 / 800 / 900.** Body is 400. Labels are 700. Headings are 800. The brand logo is the only 900.
+- **Weight ladder: 400 / 500 / 600 / 700 / 800 / 900.** Body is 400. Labels and headings are 700 (Bold).
 
 ### Font Substitutes
 
 LINE Seed Sans is LINE's proprietary typeface. When building off-brand:
 
 - Use `system-ui, -apple-system, BlinkMacSystemFont` as the fallback stack — resolves to SF Pro on macOS/iOS.
-- For non-Apple platforms, **Inter** (Google Fonts, variable) at weight 800 with `font-feature-settings: "ss03"` approximates LINE Seed Sans' character.
+- For non-Apple platforms, **Inter** (Google Fonts, variable) at weight 700 with `font-feature-settings: "ss03"` approximates LINE Seed Sans' character.
 - For SF Pro Text body, Inter at weight 400 is a close substitute.
 
 ## Layout
@@ -520,7 +520,7 @@ LINE Design System uses generous white space to let documentation breathe. Page 
 
 `**home-icon**` — Simple house-shaped icon 32x32px, black fill (#000000). Single path forming house silhouette with door.
 
-`**logo**` — "Messenger" in `{typography.brand-logo}` (LINE Seed Sans 16px / 900), color `{colors.ink}`.
+`**logo**` — "Messenger" in `{typography.brand-logo}` (LINE Seed Sans 19px / 700), color `{colors.ink}`.
 
 `**nav-item**` — Horizontal navigation links. Font family: LINE Seed Sans, size: 17px, weight: 700, letter-spacing: 0px. Default color `{colors.body-tertiary}` (#B7B7B7), active state color `{colors.ink}` (#000000). Hover transition: color 0.2s. Gap between items: 40px.
 
@@ -572,11 +572,11 @@ Border-radius rules: All tabs have squared corners (0px radius) except the first
 
 `**card-image`** — Image container. Background `{colors.canvas}` (#FFFFFF), border `1px solid {colors.border-default}` (#E8E8E8), border-radius 0px (flat, no rounding), height 280px, width 408px, margin-bottom 22px. Used for displaying component illustrations, diagrams, or preview images.
 
-`**card-title**` — Card heading below image. Font family: SF Pro Text, size: 28px, weight: 800, line-height: 1.3, letter-spacing: 0px, color `{colors.ink}` (#000000), margin-bottom 16px.
+`**card-title**` — Card heading below image. Font family: SF Pro Text, size: 28px, weight: 700, line-height: 1.3, letter-spacing: 0px, color `{colors.ink}` (#000000), margin-bottom 16px.
 
 `**card-text**` — Card description below title. Font family: SF Pro Text, size: 18px, weight: 400, line-height: 1.6, color `{colors.body-secondary}` (#616161).
 
-Structure: Image box (408×280px, 1px #E8E8E8 border, flat) → 22px gap → Text container (5px top padding) → Title (28px / 800) → 16px gap → Description (18px). The image, title, and description are **not wrapped in a container** — they are separate elements stacked vertically with defined spacing. The text container has 5px top padding for optical alignment.
+Structure: Image box (408×280px, 1px #E8E8E8 border, flat) → 22px gap → Text container (5px top padding) → Title (28px / 700) → 16px gap → Description (18px). The image, title, and description are **not wrapped in a container** — they are separate elements stacked vertically with defined spacing. The text container has 5px top padding for optical alignment.
 
 **Interactive State (when card is a link):** On hover, the **image only** lifts 4px upward with `transform: translateY(-4px)` and gains a subtle shadow `0 6px 12px rgba(0,0,0,0.06)`. Text (title and description) remains in place. Transition: `all 0.2s ease`. Cursor: pointer on entire card.
 
@@ -592,11 +592,11 @@ Grid implementation: `grid-template-columns: repeat(3, 1fr)` with media queries 
 
 `**card-medium-image`** — Medium-sized image container for grid layouts. Background `{colors.canvas}` (#FFFFFF), border `1px solid {colors.border-default}` (#E8E8E8), border-radius 0px (flat), height 220px, width 320px, margin-bottom 16px. Maintains same aspect ratio as Card Large (approximately 1.45:1).
 
-`**card-medium-title**` — Medium card heading. Font family: SF Pro Text, size: 20px, weight: 800, line-height: 1.3, letter-spacing: 0px, color `{colors.ink}` (#000000), margin-bottom 14px.
+`**card-medium-title**` — Medium card heading. Font family: SF Pro Text, size: 20px, weight: 700, line-height: 1.3, letter-spacing: 0px, color `{colors.ink}` (#000000), margin-bottom 14px.
 
 `**card-medium-text**` — Medium card description. Font family: SF Pro Text, size: 16px, weight: 400, line-height: 1.6, color `{colors.body-secondary}` (#616161).
 
-Structure: Image box (320×220px) → 16px gap → Text container (5px top padding) → Title (20px / 800) → 14px gap → Description (16px). Same vertical stacking pattern as Card Large, optimized for 3-column grid layouts with 30px gaps. The text container has 5px top padding for optical alignment.
+Structure: Image box (320×220px) → 16px gap → Text container (5px top padding) → Title (20px / 700) → 14px gap → Description (16px). Same vertical stacking pattern as Card Large, optimized for 3-column grid layouts with 30px gaps. The text container has 5px top padding for optical alignment.
 
 **Interactive State (when card is a link):** On hover, the **image only** lifts 4px upward with `transform: translateY(-4px)` and gains a subtle shadow `0 6px 12px rgba(0,0,0,0.06)`. Text (title and description) remains in place. Transition: `all 0.2s ease`. Cursor: pointer on entire card.
 
@@ -610,9 +610,9 @@ Grid implementation: `grid-template-columns: repeat(3, 1fr)` with media queries 
 
 ### Typography Components
 
-`**page-title`** — Main page heading. Typography `{typography.display}` (48px / 800), color `{colors.ink}`, padding `100px 0 20px 0` (100px top for breathing room).
+`**page-title`** — Main page heading. Typography `{typography.display}` (48px / 700), color `{colors.ink}`, padding `100px 0 20px 0` (100px top for breathing room).
 
-`**section-title**` — Section headings ("Anatomy", "States", "Types"). Typography `{typography.h2}` (32px / 800), color `{colors.ink}`, padding `0 0 24px 0`.
+`**section-title**` — Section headings ("Anatomy", "States", "Types"). Typography `{typography.h2}` (32px / 700), color `{colors.ink}`, padding `0 0 24px 0`.
 
 ### Footer
 
@@ -622,10 +622,10 @@ Grid implementation: `grid-template-columns: repeat(3, 1fr)` with media queries 
 
 ### Do
 
-- **Use exact token names as class names.** When applying styles defined in DESIGN.md, use the token name directly as the CSS class name without modification. Example: `<h1 class="display">` for Display typography (48px/800/1.2), `<h2 class="h2">` for H2 typography (32px/800/1.2).
+- **Use exact token names as class names.** When applying styles defined in DESIGN.md, use the token name directly as the CSS class name without modification. Example: `<h1 class="display">` for Display typography (48px/700/1.2), `<h2 class="h2">` for H2 typography (32px/700/1.2).
 - **Do not rename tokens.** If DESIGN.md defines `display`, use `class="display"` — not `class="page-title"`, `class="main-heading"`, or any other name. Token names are not suggestions; they are the exact class names to use in your HTML/CSS.
 - Use `{colors.primary}` (LINE Green #00C73C) for all primary actions — buttons, active states, selected radio buttons, and focus indicators.
-- Set all headings in LINE Seed Sans at weight 800. This is the brand voice.
+- Set all headings in LINE Seed Sans at weight 700 (Bold). This is the brand voice.
 - Set all body text in SF Pro Text at weight 400, 16px size, 1.6 line-height. This is the reading voice.
 - Use 1px borders in `{colors.border-default}` (#E8E8E8) for cards and component containers. Keep borders subtle.
 - Apply 80px horizontal padding for main content areas, 24px for card interiors, 32px for navigation.
@@ -638,7 +638,7 @@ Grid implementation: `grid-template-columns: repeat(3, 1fr)` with media queries 
 ### Don't
 
 - **Don't rename tokens when implementing.** AI tools often try to create "semantic" class names like `page-title` or `section-heading` when implementing DESIGN.md tokens. This breaks the system. Always use the exact token name: `display`, `h2`, `body`, etc.
-- **Don't modify token values.** If `display` is 48px/800/1.2, use exactly those values in CSS. Don't adjust to 46px or change line-height to 1.3 "to make it look better" — that breaks the system.
+- **Don't modify token values.** If `display` is 48px/700/1.2, use exactly those values in CSS. Don't adjust to 46px or change line-height to 1.3 "to make it look better" — that breaks the system.
 - Don't use multiple accent colors — LINE Green is the single action color across the entire system.
 - Don't set headings in SF Pro Text or body text in LINE Seed Sans — the font pairing is intentional and strict.
 - Don't use weight 500 or weight 600 for body text — body is always 400. Emphasized body uses 700 (labels).
@@ -647,7 +647,7 @@ Grid implementation: `grid-template-columns: repeat(3, 1fr)` with media queries 
 - Don't tighten spacing below the 4px base unit — structural rhythm depends on 8/12/16/24 multiples.
 - Don't round all four corners of tabs — tabs use `8px 8px 0 0` (top corners only) to connect with content.
 - Don't use pure black borders — borders are always #E8E8E8, #EFEFEF, or #B7B7B7 for a softer feel.
-- Don't set navigation items or tabs at weight 800 — reserve 800 for page/section headings only.
+- Don't set navigation items or tabs at extrabold (800) — headings and UI labels use Bold (700).
 - Don't reduce line-height below 1.6 for body text — generous leading is part of the reading experience.
 
 ## Responsive Behavior
@@ -688,7 +688,7 @@ Grid implementation: `grid-template-columns: repeat(3, 1fr)` with media queries 
 
 1. Reference tokens using `{token.refs}` everywhere — never inline hex codes or pixel values.
 2. When adding a new component, define it first in the `components:` YAML frontmatter with all states (`-active`, `-pressed`, `-selected`), then document it in the Components section with usage context.
-3. Headings always use LINE Seed Sans at weight 800. Body always uses SF Pro Text at weight 400. This is non-negotiable.
+3. Headings always use LINE Seed Sans at weight 700 (Bold). Body always uses SF Pro Text at weight 400. This is non-negotiable.
 4. The single accent color is LINE Green (#00C73C). No secondary brand colors exist. LINE Red (#FF334B) and Link (#4D73FF) are functional colors, not brand accents.
 5. Use 1px borders in #E8E8E8 or #EFEFEF. Never use shadows or gradients.
 6. When in doubt about spacing: use 80px for page/section padding, 24px for card padding, 16px for component gaps, 4px for micro-spacing.

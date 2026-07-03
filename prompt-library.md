@@ -174,7 +174,7 @@ DESIGN.md를 참고해서 입력 폼 페이지를 만들어줘.
 
 카드 스타일 (DESIGN.md card-medium 사용):
 - 이미지: 320x220px, border-radius: 0
-- 제목: .card-medium-title (20px, weight 800)
+- 제목: .card-medium-title (20px, weight 700)
 - 설명: .card-medium-text (16px, weight 400)
 - 이미지와 텍스트 간격: 16px
 
